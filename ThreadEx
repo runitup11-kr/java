@@ -1,0 +1,50 @@
+//자바에서 Thread 사용을 위한 문법 2가지
+// (1)번 방식으로 정의 
+
+
+class MyThread1 extends Thread{
+	
+	
+	
+	public void run() { // 콜백 메소드
+		//Thread가 수행할 코드 작성
+		for(int i = 0; i < 10; i ++) {
+			System.out.println(i);
+			
+		}
+	}
+
+}
+
+class MyThread2 implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for(int i = 100; i < 1000; i+= 100) {
+			System.out.println(i);
+		}
+	}
+	
+}
+
+
+
+
+public class ThreadEx {
+
+	public static void main(String[] args) {
+		System.out.println("start");
+		//1번 방식 사용
+		MyThread1 m1 = new MyThread1();
+		m1.start();
+		
+		MyThread2 m2 = new MyThread2();
+		Thread m2t = new Thread(m2);
+		m2t.start();
+		// Start() 메소드 호출이 이제 Thread 실행을 의미하는것은 아니다.
+		// 해당 Thread가 CPU 제어권을 얻을 수 있는 대기방에 들어가게 됨을 의미
+		
+	}
+
+}
