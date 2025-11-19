@@ -1,0 +1,71 @@
+
+
+
+//학생이 도서관에서 책을 빌리는 기능을 구현
+// 관련 클래스와 메소드를 정의후에 사용
+
+import java.util.ArrayList;
+
+class 학생{
+	
+	public void 학생이도서관에서책빌리기(String 책제목) {
+		
+	}
+	
+}
+
+class 도서관{
+	ArrayList<책> books;
+	
+	public 도서관() {
+		// 책을 보관할 빈 ArrayList 생성하여 초기화
+		this.books = new ArrayList<>();
+
+	}
+	
+	// 외부에서 인수로 전달받은 책 객체를 도서관에 책 목록에 추가
+	public void 책추가(책 book) {
+		this.books.add(book);
+		System.out.println(book.제목); //책이 추가될 때 그 책의 제목을 출력
+		
+		
+	}
+		
+}
+
+// 이 클래스는 시스템이 다루는 모든 책을 표현하는 객체를 생성하는 데 사용됩니다.
+class 책{
+	String 제목; // 책의 이름을 저장 할 변수
+	
+	public 책(String 제목) { // 새로운 책 객체를 만들 때 호출 인수로 받은 제목값을 해당 객체의
+							// 제목 변수에 할당하여 책을 초기화 시킴
+		this.제목 = 제목;
+	}
+	
+}
+
+
+
+public class 도서관에서책빌리기 {
+	public static void main(String[] args) {
+		
+		학생 s = new 학생();
+	
+		
+		
+		
+		도서관 d = new 도서관();
+		
+		책 book1 = new 책("파이썬");
+		책 book2 = new 책("자바");
+		책 book3 = new 책("anybook");
+        
+        d.책추가(book1);
+        d.책추가(book2);
+        d.책추가(book3);
+		
+		
+
+	}
+
+}
