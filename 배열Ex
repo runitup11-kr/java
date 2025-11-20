@@ -1,0 +1,35 @@
+package testproject;
+
+
+class JavaTest3 {
+	public double Test3(int[] numbers) {
+		double answer = 0; // 마지막에 계산된 평균값을 저장할 변수
+		double sum = 0; // 배열에 있는 모든 수의 합을 저장할 변수
+		
+		// for (초기값 ; 조건식 ; 증감식) { 반복할 코드 }
+		for(int i=0; i < numbers.length; i++) {
+						//.length 배열의 길이 (요소의 개수) 
+			
+			
+			sum += numbers[i]; // 배열의 각 요소를 하나씩 더함
+		}
+		
+		answer = sum / numbers.length; // 전체 합(sum)을 배열의 개수로 나눔
+		
+		return answer;
+		
+	}
+	
+}
+
+
+
+public class JavaTest3Ex {
+	public static void main(String[] args) {
+		JavaTest3 t = new JavaTest3();
+		int[] nums = {10, 20, 30};
+		System.out.println(t.Test3(nums));
+
+	}
+
+}
