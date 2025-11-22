@@ -1,0 +1,33 @@
+package testproject;
+
+
+
+class Tv{
+	String color; // 색상
+	boolean power; // 전원 상태
+	int channel; // 채널
+	
+	//TV 기능
+	void power() { power =! power;} // TV를 키거나 끄는 메소드
+	void channelUp() {++channel;} // 채널을 높이는 메소드
+	 void channelDown() {--channel;} //채널을 내리는 메소드
+	
+}
+
+
+
+
+
+
+
+public class OOPTvEx {
+	public static void main(String[] args) {
+		Tv t; //Tv 인스턴스를 참조하기 위한 변수 t 선언
+		t = new Tv(); // Tv 인스턴스를 생성
+		t.channel = 7; // Tv인스턴스의 멤버변수 channel의 값을 7로 설정
+		t.channelDown(); //tv 인스턴스의 메서드 channel down()호출
+		System.out.println("현재 채널은" + t.channel + "입니다");
+
+	}
+
+}
