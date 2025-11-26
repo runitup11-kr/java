@@ -1,0 +1,69 @@
+
+
+class A {
+	public void printA() {
+		System.out.println("A");
+	}
+	
+}
+class B extends A {
+	public void printA() { //메소드 오버라이딩
+		System.out.println("B클래스 안의 printA()");
+		
+		
+	}
+	public void printB() {
+		System.out.println("B");
+		
+	}
+	
+}
+
+class C extends A {
+	public void printA() {
+		System.out.println("C클래스 안의 printA()");
+		
+		
+	}
+	public void printC() {
+		System.out.println("C");
+	}
+	
+}
+
+
+
+public class PolymorphismEx {
+	public static void main(String[] args) {
+	
+		
+		//방식1
+		A a = new A();
+		a.printA();
+		//방식2
+		A aa = new B();
+		aa.printA();
+		
+		//방식2-1
+		C c = new C();
+		c.printC();
+		c.printA();
+		//방식2-2
+		A cc = new C();
+		//cc.printC(); 이건 안됨
+		cc.printA();
+		
+		// 다향성
+		System.out.println("----------");
+		aa.printA();
+		cc.printA();
+		
+		//다향성 문법 적용의 조건
+		//(1) 클래스가 상속관계에 있어야함
+		//(2) 메소드 오버라이딩
+		// (3) A aa = new B();
+		
+		
+	}
+
+}
