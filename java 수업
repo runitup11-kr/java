@@ -1,0 +1,32 @@
+class Person{}
+
+
+
+
+public class 나의저장공간 {
+	//나의저장공간에 데이터를 저장하기 위한 메소드
+	public void push (Object o) {
+		
+	}
+//	public void push ( String str) {
+//	}
+//	public void push( Person p ) {
+//		
+//	}
+	
+	// 나의저장공간에서 데이터를 가져오기 위한 메소드
+	public Object pop() {
+		return new Person();
+
+	}
+	public static void main(String[] args) {
+		나의저장공간 a = new 나의저장공간();
+		String r = a.pop();
+		System.out.println(r);
+		a.push("딸기");
+		a.push(new Person());
+		
+		
+	}
+	
+}
